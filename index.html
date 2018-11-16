@@ -11,7 +11,16 @@
         <h1 class = "texts">Welcome to Metatton's quiz show!!</h1>
     </div>
 
-    <div class = "question-div">
+    <div class = "mainImage">
+        <img class = "icon" src="MettatonGif.gif" alt="Metatton">
+    </div>
+
+    <div id = "talking">
+        <p class = "metatalk texts" id="quote">OH BOY! I CAN ALREADY TELL IT'S GONNA BE A GREAT SHOW!!</p>
+        <button onclick= "pressContinue()" type="button" id="continueButton">Continue</button>
+    </div>
+
+    <div class = "question-div-hidden hide-me" id = "gameshow">
         <p id = "question" class = "texts">Here is the question!</p>
 
         <div class = "buttons">
@@ -22,6 +31,11 @@
 
     </div>
     
+    <div class = "music">
+        <audio controls autoplay loop>
+            <source src="mettatongameshow.wav" type="audio/wav">
+        </audio> 
+    </div>
 
     <script>setQuestion(0)</script>
 </body>

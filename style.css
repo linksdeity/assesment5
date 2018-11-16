@@ -5,3 +5,22 @@
 .texts{
     color: white;
 }
+
+.mainImage{
+    float: left;
+}
+
+
+.icon{
+    width: 450px;
+    height: auto;
+}
+
+
+.hide-me{
+    visibility: hidden;
+}
+
+.music{
+    float: right;
+}
