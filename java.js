@@ -10,6 +10,7 @@ var answer;
 var i = 0;
 var speechCount = 0;
 var wins = 0;
+var points = 0;
 
 function setQuestion(i){
 document.getElementById("question").innerHTML = questionArray[i].question;
@@ -28,6 +29,8 @@ function inputAnswer(input){
     else{
         alert(questionArray[i].incorrect)
         i = 0;
+        points = 0;
+        document.getElementById("score").innerHTML = points
         setQuestion(i);
     }
 }
@@ -37,6 +40,8 @@ function winChecker(score){
     {
         alert("YOU WIN!!!!!!")
         wins++;
+        points++;
+        document.getElementById("score").innerHTML = points
         i = 0;
         setQuestion(i);
         document.getElementById("talking").classList.remove("hide-me")
@@ -45,6 +50,8 @@ function winChecker(score){
     }
     else{
         alert(questionArray[i-1].correct)
+        points++;
+        document.getElementById("score").innerHTML = points
         setQuestion(i);
     }
 }
